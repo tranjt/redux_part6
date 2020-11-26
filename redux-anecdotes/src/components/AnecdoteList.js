@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { vote } from '../reducers/anecdoteReducer'
 import { setNotification } from '../reducers/notificationReducer'
 
-const AnecdoteList = () => {  
+const AnecdoteList = () => {
   const anecdotes = useSelector(({ filter, anecdotes }) => {
     if (filter === '') {
       return anecdotes.sort((a, b) => b.votes - a.votes)
